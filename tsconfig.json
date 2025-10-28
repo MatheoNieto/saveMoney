@@ -17,6 +17,7 @@
       "@routes/*": ["src/shared/routes/*"],
       "@services/*": ["src/shared/services/*"],
       "@theme/*": ["src/shared/theme/*"],
+      "@store/*": ["src/store/*"],
       "@config/*": ["src/config/*"]
     }
   },
