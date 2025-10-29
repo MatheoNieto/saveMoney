@@ -21,11 +21,10 @@ const authReducer = createReducer(INITIAL_STATE, builder => {
   });
 });
 
-export type AuthenticationState = ReturnType<typeof authReducer>;
-
 const persistAuthReducer = persistReducer<AuthenticationState>(
   persistConfigAuth,
   authReducer,
 );
 
+export type AuthenticationState = ReturnType<typeof authReducer>;
 export default persistAuthReducer;
