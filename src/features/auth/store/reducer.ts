@@ -1,7 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {persistReducer} from 'redux-persist';
 import {actions} from './actions';
-import {persistConfigAuth} from 'src/store/config';
+import {persistConfigAuth} from '@store/config';
 
 type AUTH_STATE_TYPE = {
   api_key: string | undefined;

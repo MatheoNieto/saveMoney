@@ -15,6 +15,7 @@ module.exports = {
           '@services': './src/shared/services',
           '@theme': './src/shared/theme',
           '@config': './src/config',
+          '@store': './src/store',
         },
       },
     ],

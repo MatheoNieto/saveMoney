@@ -2,7 +2,7 @@ import React from 'react';
 import {RootNavigator} from '@routes/root';
 import {PersistGate} from 'redux-persist/integration/react';
 import {Provider as StoreProvider} from 'react-redux';
-import {persistor, store} from '@store';
+import {persistor, store} from '@store/store';
 import {NavigationContainer} from '@react-navigation/native';
 
 export const Application = () => {
