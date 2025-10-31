@@ -3,12 +3,12 @@ import {CustomFonts} from '@theme/constants';
 const inputVariants = {
   defaults: {
     fontFamily: CustomFonts.Primary,
-    fontWeight: '300',
+    fontWeight: '100',
     fontSize: 16,
     backgroundColor: 'input',
     paddingHorizontal: 'm',
     height: 60,
-    borderRadius: 's',
+    borderRadius: 5,
     borderWidth: 1,
     borderColor: 'inputBorder',
   },

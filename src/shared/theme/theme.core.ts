@@ -10,14 +10,15 @@ import {
 const theme = createTheme({
   colors: {
     base100: palette.base[100],
-    primary100: palette.primary[100],
+    primary: palette.primary[100],
     black: palette.black,
     white: palette.white,
     error: palette.error[500],
-    inputBorder: palette.base[500],
+    inputBorder: palette.base[100],
     lightGray: palette.base[100],
     disabled: palette.base[100],
     input: palette.base[0],
+    inputBorderFocused: palette.base[400],
   },
   spacing: {
     unset: 0,

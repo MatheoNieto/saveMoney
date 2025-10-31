@@ -74,13 +74,12 @@ const FieldInput = forwardRef<typeof Input, Props>(
     );
 
     return (
-      <Box {...boxProps} style={[containerStyle]}>
+      <Box my="xs" {...boxProps} style={[containerStyle]}>
         <Input
-          variant={rest.multiline ? 'area' : undefined}
           ref={ref}
           style={styleInput}
           name={name}
-          onBlur={handleBlur}
+          // onBlur={handleBlur}
           onChangeText={handleChangeText}
           value={field.value}
           isInvalid={isInvalid}

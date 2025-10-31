@@ -8,8 +8,8 @@ const LoginContainer = () => {
   };
 
   return (
-    <Box>
-      <Text>Login</Text>
+    <Box p="m">
+      <Text variant="head">Login</Text>
       <LoginForm onSubmit={onSubmit} />
     </Box>
   );

@@ -7,6 +7,12 @@ const textVariants = {
     letterSpacing: 0.049,
     fontSize: 14,
   },
+  head: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    my: 's',
+  },
   errorFieldForm: {
     fontWeight: '500',
     fontSize: 8,
@@ -14,6 +20,7 @@ const textVariants = {
     textTransform: 'uppercase',
     color: 'error',
   },
+
   regular: {
     fontWeight: 'normal',
     fontSize: 14,

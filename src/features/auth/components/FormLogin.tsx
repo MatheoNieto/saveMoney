@@ -43,6 +43,7 @@ export const LoginForm: React.FC<Props> = ({onSubmit, loading}) => {
         secureTextEntry
       />
       <Button
+        variant="solid"
         disabled={!isValid || loading}
         isLoading={loading}
         onPress={handleSubmit(onSubmit)}>

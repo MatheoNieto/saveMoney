@@ -18,6 +18,8 @@ const buttonVariants = {
   },
   solid: {
     backgroundColor: 'primary',
+    width: '100%',
+    marginTop: 's',
   },
   disabled: {
     backgroundColor: 'disabled',
