@@ -3,7 +3,7 @@ import {ThemeProvider as RestyleProvider} from '@shopify/restyle';
 
 import lightTheme from './lightTheme';
 import darkTheme from './darkTheme';
-import {useIsDarkMode} from './hook';
+import {useIsDarkMode} from './hooks';
 
 type Props = {
   children: React.ReactElement;

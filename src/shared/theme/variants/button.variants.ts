@@ -1,3 +1,4 @@
+import {backgroundColor} from '@shopify/restyle';
 import {CustomFonts} from '@theme/constants';
 
 const buttonVariants = {
@@ -14,6 +15,12 @@ const buttonVariants = {
     fontWeight: '600',
     fontSize: 17,
     letterSpacing: 0.049,
+  },
+  solid: {
+    backgroundColor: 'primary',
+  },
+  disabled: {
+    backgroundColor: 'disabled',
   },
 };
 

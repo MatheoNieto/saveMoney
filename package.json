@@ -12,6 +12,7 @@
     "ios:dev": "concurrently --raw 'react-native run-ios --no-packager --simulator=\"iPhone 15 Pro\"' 'yarn start'"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@react-native/new-app-screen": "0.82.1",
     "@react-navigation/bottom-tabs": "^7.6.0",
     "@react-navigation/native": "^7.1.19",
@@ -20,13 +21,15 @@
     "@shopify/restyle": "^2.4.5",
     "color": "^5.0.2",
     "react": "19.1.1",
+    "react-hook-form": "^7.65.0",
     "react-native": "0.82.1",
     "react-native-animatable": "^1.4.0",
     "react-native-gesture-handler": "^2.29.0",
     "react-native-mmkv-storage": "^12.0.0",
     "react-native-safe-area-context": "^5.5.2",
     "react-redux": "^9.2.0",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

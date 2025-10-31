@@ -10,6 +10,7 @@ module.exports = {
           '@features': './src/features',
           '@ui': './src/shared/ui',
           '@components': './src/shared/components',
+          '@hooks': './src/shared/hooks',
           '@navigators': './src/shared/navigators',
           '@routes': './src/shared/routes',
           '@services': './src/shared/services',

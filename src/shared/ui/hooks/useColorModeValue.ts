@@ -1,4 +1,4 @@
-import {useIsDarkMode} from '@theme/hook';
+import {useIsDarkMode} from '@theme/hooks';
 import {Theme} from '@theme/index';
 
 export default function useColorModeValue<

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text} from 'react-native';
+import LoginContainer from '../containers/Login';
 
 const LoginScreen = () => {
-  return <Text>adfasdfasdf</Text>;
+  return <LoginContainer />;
 };
 
 export default LoginScreen;

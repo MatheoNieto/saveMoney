@@ -1,6 +1,11 @@
 import {createTheme} from '@shopify/restyle';
 import {palette} from '@theme/constants';
-import {textVariants, buttonVariants, cardVariants} from './variants';
+import {
+  textVariants,
+  buttonVariants,
+  cardVariants,
+  inputVariants,
+} from './variants';
 
 const theme = createTheme({
   colors: {
@@ -8,6 +13,11 @@ const theme = createTheme({
     primary100: palette.primary[100],
     black: palette.black,
     white: palette.white,
+    error: palette.error[500],
+    inputBorder: palette.base[500],
+    lightGray: palette.base[100],
+    disabled: palette.base[100],
+    input: palette.base[0],
   },
   spacing: {
     unset: 0,
@@ -38,6 +48,7 @@ const theme = createTheme({
   textVariants: textVariants,
   buttonVariants: buttonVariants,
   cardVariants: cardVariants,
+  inputVariants: inputVariants,
 });
 
 export type ThemeCore = typeof theme;
