@@ -1,15 +1,15 @@
 import {useMutation} from '@tanstack/react-query';
 import {loginService} from '../services';
-import {DataLogin} from '../models';
+import {DataLogin, LoginApiResponse} from '../models';
 
 export const useLogin = ({
   onSuccess,
   onError,
 }: {
-  onSuccess: (data: string) => void;
+  onSuccess: (data: LoginApiResponse) => void;
   onError: (error: any) => void;
 }) => {
-  return useMutation<string, void, DataLogin>({
+  return useMutation<LoginApiResponse, void, DataLogin>({
     mutationFn: loginService,
     onSuccess,
     onError,

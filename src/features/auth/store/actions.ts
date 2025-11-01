@@ -1,6 +1,6 @@
 import {createAction} from '@reduxjs/toolkit';
+import {LoginApiResponse} from '../models';
 
-export const actions = {
-  // TODO: replace 'any' with proper type
-  signIn: createAction<{data: any}>('auth/login'),
+export const authActions = {
+  signIn: createAction<{data: LoginApiResponse}>('auth/login'),
 };

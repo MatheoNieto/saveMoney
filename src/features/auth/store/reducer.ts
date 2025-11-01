@@ -1,23 +1,26 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {persistReducer} from 'redux-persist';
-import {actions} from './actions';
+import {authActions} from './actions';
 import {persistConfigAuth} from '@store/config';
 
 type AUTH_STATE_TYPE = {
-  api_key: string | undefined;
+  token: string | undefined;
+  email: string | undefined;
   isAuthenticated: boolean;
 };
 
 const INITIAL_STATE: AUTH_STATE_TYPE = {
-  api_key: undefined,
+  token: undefined,
+  email: undefined,
   isAuthenticated: false,
 };
 
 const authReducer = createReducer(INITIAL_STATE, builder => {
-  builder.addCase(actions.signIn, (state, action) => {
+  builder.addCase(authActions.signIn, (state, action) => {
     const {data} = action.payload;
-    state.isAuthenticated = !!data.api_key;
-    state.api_key = data.api_key;
+    state.isAuthenticated = !!data.token;
+    state.token = data.token;
+    state.email = data.email;
   });
 });
 
