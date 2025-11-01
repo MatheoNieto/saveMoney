@@ -31,7 +31,6 @@ export const LoginForm: React.FC<Props> = ({onSubmit, loading}) => {
         name={formKeys.EMAIL}
         control={control}
         label="Email"
-        placeholder="Enter your email"
         autoCapitalize="none"
         keyboardType="email-address"
       />
@@ -39,7 +38,6 @@ export const LoginForm: React.FC<Props> = ({onSubmit, loading}) => {
         name={formKeys.PASSWORD}
         control={control}
         label="Password"
-        placeholder="Enter your password"
         secureTextEntry
       />
       <Button

@@ -1,3 +1,4 @@
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {AuthRoutes} from './routes';
 import {AuthParamsList} from './types';
@@ -7,7 +8,13 @@ const AuthStack = () => {
   const {Navigator, Screen} = createStackNavigator<AuthParamsList>();
   return (
     <Navigator initialRouteName={AuthRoutes.LOGIN}>
-      <Screen name={AuthRoutes.LOGIN} component={LoginScreen} />
+      <Screen
+        name={AuthRoutes.LOGIN}
+        component={LoginScreen}
+        options={{
+          header: () => null,
+        }}
+      />
       <Screen name={AuthRoutes.REGISTER} component={RegisterScreen} />
     </Navigator>
   );

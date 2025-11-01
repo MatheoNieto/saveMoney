@@ -33,7 +33,6 @@ const FieldInput = forwardRef<typeof Input, Props>(
       onChangeText,
       styleInput,
       styleContent,
-      isClearButtonModeIcon = 'while-editing',
       boxProps,
       ...rest
     },
@@ -79,11 +78,10 @@ const FieldInput = forwardRef<typeof Input, Props>(
           ref={ref}
           style={styleInput}
           name={name}
-          // onBlur={handleBlur}
+          onBlur={handleBlur}
           onChangeText={handleChangeText}
           value={field.value}
           isInvalid={isInvalid}
-          clearButtonMode={isClearButtonModeIcon}
           styleContent={styleContent}
           {...passedProps}
         />

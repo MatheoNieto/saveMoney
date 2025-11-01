@@ -9,6 +9,8 @@ import {
   initialWindowMetrics,
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
+import {QueryClientProvider} from '@tanstack/react-query';
+import {queryClient} from '@services/queryClient';
 
 export const Application = () => {
   return (
@@ -16,9 +18,11 @@ export const Application = () => {
       <StoreProvider store={store}>
         <PersistGate persistor={persistor} loading={null}>
           <ThemeProvider>
-            <NavigationContainer>
-              <RootNavigator />
-            </NavigationContainer>
+            <QueryClientProvider client={queryClient}>
+              <NavigationContainer>
+                <RootNavigator />
+              </NavigationContainer>
+            </QueryClientProvider>
           </ThemeProvider>
         </PersistGate>
       </StoreProvider>
