@@ -4,11 +4,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import FieldInput from '@components/form/FieldInput';
 import {formKeys, schemaLogin} from '../constants';
 import {Box, Button} from '@ui/components';
-
-type LoginFormValues = {
-  [formKeys.EMAIL]: string;
-  [formKeys.PASSWORD]: string;
-};
+import {LoginFormValues} from '../models';
 
 type Props = {
   onSubmit: (values: LoginFormValues) => void;
@@ -19,7 +15,7 @@ export const LoginForm: React.FC<Props> = ({onSubmit, loading}) => {
   const {
     control,
     handleSubmit,
-    formState: {isValid},
+    formState: {isValid, errors},
   } = useForm<LoginFormValues>({
     resolver: yupResolver(schemaLogin),
     mode: 'onChange',
@@ -44,7 +40,14 @@ export const LoginForm: React.FC<Props> = ({onSubmit, loading}) => {
         variant="solid"
         disabled={!isValid || loading}
         isLoading={loading}
-        onPress={handleSubmit(onSubmit)}>
+        onPress={handleSubmit(
+          data => {
+            onSubmit(data);
+          },
+          errors => {
+            console.log('Validation errors:', errors);
+          },
+        )}>
         Login
       </Button>
     </Box>

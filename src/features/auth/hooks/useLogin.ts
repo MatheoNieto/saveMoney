@@ -6,8 +6,8 @@ export const useLogin = ({
   onSuccess,
   onError,
 }: {
-  onSuccess: any;
-  onError: any;
+  onSuccess: (data: string) => void;
+  onError: (error: any) => void;
 }) => {
   return useMutation<string, void, DataLogin>({
     mutationFn: loginService,
